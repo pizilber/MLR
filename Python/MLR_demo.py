@@ -23,8 +23,8 @@ def main():
 
     # MixIRLS options
     opts = {
-        'rho': 1., # oversampling parameter
-        'nu': 0.5, # tuning parameter
+        'rho': 1., # oversampling parameter. Set to 2 in real-data experiments
+        'nu': 0.5, # tuning parameter. Set to 1 in real-data experiments
         'w_th_init': 0.1, # initialization for threshold parameter w_th
         'corrupt_frac': cnfg['corrupt_frac'], # fraction of outliers
         'unknownK': cnfg['overparam'] > 0, # if true, assumes K is unknown
