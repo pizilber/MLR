@@ -1,12 +1,12 @@
 # Mixed Linear Regression (MLR)
 MLR is a simple generalization of linear regression. In MLR, each sample belongs to one of $K$ unknown linear models, and it is not known to which one. MLR can thus be viewed as a combination of linear regression and clustering. A book reference can be found in Bishop (2006), Pattern Recognition, Chapter 14.
 
-# Mixed-IRLS
-This repository contains `MATLAB` and `Python` implementations of the `Mixed-IRLS` algorithm, described in [this arXiv preprint](https://arxiv.org/abs/2301.12559).
-The key idea that distinguishes `Mixed-IRLS` from most other methods is sequential recovery: rather than recoverying all the $K$ models simultaneously, `Mixed-IRLS` recovers them one by one, using tools from robust regression. Specifically, it uses iteratively reweighted least squares (IRLS) starting from a random initialization.
+# Mix-IRLS
+This repository contains `MATLAB` and `Python` implementations of the `Mix-IRLS` algorithm, described in [this arXiv preprint](https://arxiv.org/abs/2301.12559).
+The key idea that distinguishes `Mix-IRLS` from most other methods is sequential recovery: rather than recoverying all the $K$ models simultaneously, `Mix-IRLS` recovers them one by one, using tools from robust regression. Specifically, it uses iteratively reweighted least squares (IRLS) starting from a random initialization.
 Importantly, in its internediate steps, `Mix-IRLS` allows an "I don't know" assignment to low-confidence samples, namely samples whose model identity is uncertain. These samples are ignored, and only used in a later refinement phase. See an illustration of `Mix-IRLS` in the figure below.
 
-`Mixed-IRLS` deals well with balanced mixtures, where the proportions of the $K$ components are approximately equal; however, it is particulary effective for **imbalanced mixtures**. In addition, `Mixed-IRLS` can handle outliers in the data, and overestimated/unknown number of components $K$.
+`Mix-IRLS` deals well with balanced mixtures, where the proportions of the $K$ components are approximately equal; however, it is particulary effective for **imbalanced mixtures**. In addition, `Mix-IRLS` can handle outliers in the data, and overestimated/unknown number of components $K$.
 
 ![MixIRLS illustration](https://github.com/pizilber/MLR/blob/main/MixIRLS_illustration.png)
 
