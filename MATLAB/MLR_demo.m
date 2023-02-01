@@ -15,8 +15,8 @@ cnfg.overparam = 0; % overparameterization
 cnfg.corrupt_frac = 0.0; % fraction of outliers
 
 %% MixIRLS options
-opts.rho = 1.; % oversampling parameter
-opts.nu = 0.5; % tuning parameter
+opts.rho = 1.; % oversampling parameter. Set to 2 in real-data experiments
+opts.nu = 0.5; % tuning parameter. Set to 1 in real-data experiments
 opts.w_th_init = 0.1; % initialization for threshold parameter w_th
 opts.corrupt_frac = cnfg.corrupt_frac; % fraction of outliers
 opts.unknownK = cnfg.overparam > 0; % if true, assumes K is unknown
