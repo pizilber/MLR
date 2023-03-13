@@ -188,7 +188,7 @@ def MixIRLS_inner(X, y, wfun, nu, intercept, iterlim, beta_init=[]):
     beta = np.zeros((d,))
     Q, R, perm = qr(X, mode='economic', pivoting=True)
     if beta_init == []:
-        beta[perm,:] = weighted_ls(R, Q.T @ y)
+        beta[perm] = weighted_ls(R, Q.T @ y)
     else:
         beta = beta_init
 
