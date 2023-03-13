@@ -2,7 +2,7 @@ import numpy as np
 
 # weighted least squares
 def weighted_ls(X, y, w=[]):
-    if (w is None) or (w == []):
+    if w == []:
         w = np.ones(len(y),)
     ws = np.sqrt(w)
     WX = ws[:, np.newaxis] * X
